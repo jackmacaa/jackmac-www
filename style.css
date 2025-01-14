@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sunflower', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* throughout */
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* Header */
+
+.top{
+    height: 100vh;
+}
+
+header{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo img{
+
+    max-height:50px
+}
+
+nav{
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    font-size: 1.1em;   
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    display: inline;
+    padding: 0 20px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+/* content */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 65vh;
+    padding-top: 200px;  
+}
+
+.title{
+    min-width: 25%;
+    animation: 1s ease-out .3s 1 fadeIn forwards;
+    opacity: 0;
+    
+}
+
+.blurb{
+    max-width: 60%;
+    animation: 3s ease-out 1.25s 1 fadeIn forwards;
+    opacity: 0;
+    
+}
+
+h1{
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.25em;
+    color: #636363;
+    letter-spacing: 3px
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+
+/* work */
+
+.work {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.allthings img{
+    height: 600px;
+}
+
+.description{
+    max-width: 35%;
+    font-weight: 300;
+    font-size: 2em;
+    letter-spacing: 2px;
+    padding-top: 65px;
+}
+
+.description p{
+    padding-bottom: 30px;
+    color: black;
+}
+
+.description a{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: #636363;
+    letter-spacing: 3px
+}
+
+/* kickin */
+
+.kickin img{
+    height: 500px;
+    z-index: -1;
+    position: relative;
+}
+
+.description img{
+    height: 150px;
+    z-index: 10;
+
+}
+
+
+/* footer */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 15vh;
+    font-size: 1.25em;
+}
+
+footer span{
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: #636363;
+    letter-spacing: 3px
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 992px) {
+  
+    body{
+        font-size: 14px;
+    }
+  
+    .content {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+
+   }
+
+   .title{
+       padding-bottom: 100px;
+   }
+
+   .work{
+    flex-direction: column;
+    text-align: center;
+   }
+
+   .description{
+       max-width: 75%;
+       padding-top: 5px;
+   }
+
+
+}
+
+@media screen and (max-width: 786px){
+    .kickin img{
+        height: 400px;
+    }
+
+    body{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    body{
+        font-size: 10px;
+    }
+
+    .content{
+        padding-top: 100px;
+        height: 76vh;
+    }
+    
+    .blurb{
+        max-width: 75%;
+    }
+    header{
+        padding: 0;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .title{
+        padding-bottom: 50px;
+    }
+    
+    .allthings img{
+        height: 300px;
+
+    }
+
+    .description img{
+        height: 75px;
+    }
+    .kickin img{
+        height: 300px;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        padding: 20px 20px;
+        height: 25vh;
+    }
+}
