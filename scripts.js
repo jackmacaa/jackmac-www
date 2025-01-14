@@ -8,6 +8,6 @@ const getBirthYears = (dob) => {
   return Math.abs(ageDate.getUTCFullYear() - 1970) + " Years Old";
 };
 
-const yearsOld = getBirthYears("1991-04-12");
+const yearsOld = getBirthYears("1991-04-01");
 
 const yearsOldElement = (document.getElementById("yearsOldId").innerHTML = yearsOld);
